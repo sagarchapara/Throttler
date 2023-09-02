@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Throttler", "Throttler\Throttler.csproj", "{5BBE2D96-5CBF-4120-AB5D-38DF6DABEE99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RateLimiterTests", "RateLimiterTests\RateLimiterTests.csproj", "{4D52CAEE-BD58-4840-9F8B-371A515DC5D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BBE2D96-5CBF-4120-AB5D-38DF6DABEE99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBE2D96-5CBF-4120-AB5D-38DF6DABEE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBE2D96-5CBF-4120-AB5D-38DF6DABEE99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBE2D96-5CBF-4120-AB5D-38DF6DABEE99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D52CAEE-BD58-4840-9F8B-371A515DC5D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D52CAEE-BD58-4840-9F8B-371A515DC5D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D52CAEE-BD58-4840-9F8B-371A515DC5D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D52CAEE-BD58-4840-9F8B-371A515DC5D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFACFAC9-BB1A-4168-A958-E22322121DA7}
+	EndGlobalSection
+EndGlobal
