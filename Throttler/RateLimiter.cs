@@ -43,11 +43,11 @@ namespace Throttler
         {
             Guid id = Guid.NewGuid();
 
-            Request request = new Request(id, action);
+            Request request = new(id, action);
 
             this.userRequestQueue.Enqueue(request);
 
-            TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
+            TaskCompletionSource taskCompletionSource = new();
 
             userRequestTasks.TryAdd(id, taskCompletionSource);
 

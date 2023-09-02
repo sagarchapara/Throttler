@@ -15,22 +15,15 @@ namespace Throttler.tests
         [TestMethod]
         public async Task RequestLimiterTest()
         {
-            RateLimiter rateLimiter = new RateLimiter(new RateLimiterOptions(10, TimeSpan.FromSeconds(1)));
+            RateLimiter rateLimiter = new(new RateLimiterOptions(10, TimeSpan.FromSeconds(1)));
 
             Stopwatch watch = Stopwatch.StartNew();
 
-            List<Task> tasks = new List<Task>(100);
+            List<Task> tasks = new(100);
 
             int num = 0;
 
-            Func<Task> funcBody = async () =>
-            {
-                Logger.LogMessage($"Executing {Interlocked.Increment(ref num)} Execution Time: {DateTime.Now}");
-
-                await Task.Delay(1000);
-            };
-
-            for(int i=0;i<100; i++)
+            for (int i=0;i<100; i++)
             {
                 tasks.Add(rateLimiter.ExecuteAsync(funcBody));
             }
@@ -40,6 +33,13 @@ namespace Throttler.tests
             watch.Stop();
 
             Assert.IsTrue(watch.Elapsed.TotalSeconds >= 10);
+
+            async Task funcBody()
+            {
+                Logger.LogMessage($"Executing {Interlocked.Increment(ref num)} Execution Time: {DateTime.Now}");
+
+                await Task.Delay(1000);
+            }
         }
     }
 }
